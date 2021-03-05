@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "API para uma seguradora de veiculos",
+		"description": "API para uma seguradora de veiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Cliente 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Cliente 1 \",\r\n    \"cpf\": \"22750562031\",\r\n    \"cidade\": \"Sao Paulo\",\r\n    \"uf\": \"SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos os Cadastros",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080//cliente/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"cliente",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cliente/252Ff168086f32df698",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar do Cadastro Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"NUM ID \",\r\n    \"nome\": \"Cliente 3\",\r\n    \"cpf\": \"55250088074\",\r\n    \"cidade\": \"Sao Paulo\",\r\n    \"uf\": \"SP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/cliente/id usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"id usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD Cliente"
+		},
+		{
+			"name": "Apolice",
+			"item": [
+				{
+					"name": "Apolice 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"valor\": 2350.00,\r\n    \"vigenciaInicial\": \"2021-03-05\",\r\n    \"vigenciaFinal\": \"2022-03-05\",\r\n    \"placaVeiculo\": \"EIY3046\",\r\n    \"clienteApolice\": {\r\n        \"id\": \"NUM ID\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apolice/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Apolice",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/apolice/NUM DO ID ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"NUM "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todas as apolices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/apolice/list-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"list-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca da Apolice por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/apolice/num ID ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"num ID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Cadastro Apolice",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/apolice/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Por Numero da Apólice",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/apolice/buscar-numero/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"apolice",
+								"buscar-numero",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD APOLICE"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="maven:maven-jar-plugin:1.4" type="repository">
+    <properties maven-id="maven:maven-jar-plugin:1.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/maven/maven-jar-plugin/1.4/maven-jar-plugin-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
